@@ -1,8 +1,6 @@
 import React from 'react';
 import { 
-  StyleSheet, 
-  Text, 
-  View ,
+  StyleSheet,
   Image
 } from 'react-native';
 
@@ -57,7 +55,7 @@ export default createBottomTabNavigator({
   },
 
   Profile: {
-    screen: Inbox,
+    screen: Profile,
     navigationOptions: {
       tabBarLabel: 'PROFILE',
       tabBarIcon: ({ tintColor }) => (
