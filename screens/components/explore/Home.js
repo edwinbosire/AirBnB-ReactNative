@@ -3,14 +3,16 @@ import {
     StyleSheet, 
     Text, 
     View, 
-    Image } from 'react-native';
+    Image,
+    TouchableOpacity,
+} from 'react-native';
 
 import StarRating from 'react-native-star-rating'
 
 class Home extends React.Component {
   render() {
     return (
-        <View style ={[{width: this.props.size, height: this.props.size, }, styles.container]}>
+        <TouchableOpacity activeOpacity={0.75} style ={[{width: this.props.size, height: this.props.size, }, styles.container]}>
             <View style={{ flex:1}}>
                 <Image style ={styles.image} source={this.props.imageURI} />
             </View>
@@ -26,7 +28,7 @@ class Home extends React.Component {
                     starSize={10}
                 />
             </View>
-        </View>
+        </TouchableOpacity>
 );
   }
 }

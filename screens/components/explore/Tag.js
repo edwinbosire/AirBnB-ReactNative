@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 class Tag extends React.Component {
   render() {
     return (
-        <View style = {styles.container}>
+        <TouchableOpacity style = {styles.container} onPress={this.props.onPressButton}>
             <Text style={{fontWeight:"700", fontSize:10}}>{this.props.title}</Text>
-        </View>
+        </TouchableOpacity>
     );
   }
 }

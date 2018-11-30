@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, 
     Text, 
     View,
+    TouchableOpacity,
     ImageBackground,
     Dimensions } from 'react-native';
 
@@ -30,14 +31,14 @@ class Banner extends React.Component {
         <View style = {styles.container}>
             <Text style= {styles.title}> { this.props.title } </Text>
             <Text style= { styles.subtitle }> { this.props.subtitle } </Text>
-            <View style={ [{width: width - 40}, styles.imageContainer] }>
+            <TouchableOpacity activeOpacity={0.75} style={ [{width: width - 40}, styles.imageContainer] }>
                 <ImageBackground style={styles.bannerImage} source={this.props.imageURI} >
                     <SvgComponent style={{marginBottom:24}}/>
                     <View style={{ justifyContent:'center', alignContent:'center', width: 220, height: 46,}}>
                         <Button title= "EXPLORE HOMES" indicator={true}/>
                     </View>
                 </ImageBackground>
-            </View>
+            </TouchableOpacity>
       </View>
 );
   }

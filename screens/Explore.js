@@ -50,6 +50,9 @@ class Explore extends React.Component {
 
 }
 
+onPressTag = () => {
+  console.log("Tag pressed")
+}
   render() {
     return (
       <SafeAreaView style={{ flex: 1}}>
@@ -65,7 +68,7 @@ class Explore extends React.Component {
                 />
             </View>
             <Animated.View style={{ zIndex:0, flexDirection:'row', marginHorizontal: 20, top:this.animatedTagTop, opacity: this.animatedOpacity}}>
-              <Tag title={'Dates'}/>
+              <Tag title={'Dates'} onPressButton={this.onPressTag}/>
               <Tag title={'Filters'}/>
               <Tag title={'Guests'}/>
             </Animated.View>

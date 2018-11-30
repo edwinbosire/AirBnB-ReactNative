@@ -2,22 +2,20 @@ import React from 'react';
 import { StyleSheet, 
     Text, 
     View,
-    ImageBackground,
+    TouchableOpacity,
     Dimensions } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons'
 
-const { height, width } = Dimensions.get('window')
-
 class ExploreButton extends React.Component {
   render() {
     return (
-        <View style = {styles.container}>
+        <TouchableOpacity activeOpacity={0.95} underlayColor={'grey'} style = {styles.container}>
             <View style={styles.buttonContainer}>
                 <Text style={styles.buttonTitle}> {this.props.title} </Text>
                 <Icon name="ios-arrow-forward" color={'black'} size={14} style={{marginTop:3}}/>
             </View>
-      </View>
+      </TouchableOpacity>
 );
   }
 }

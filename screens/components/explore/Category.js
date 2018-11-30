@@ -3,12 +3,13 @@ import {
     StyleSheet, 
     Text, 
     View, 
+    TouchableOpacity,
     Image } from 'react-native';
 
 class Category extends React.Component {
   render() {
     return (
-        <View style={styles.container}> 
+        <TouchableOpacity activeOpacity={0.75}  style={styles.container}> 
             <View style={{flex:2, overflow: 'hidden', borderTopRightRadius:4, borderTopLeftRadius:4}}>
                 <Image source = {this.props.imageSource}
             style= {{flex: 2, width: null, height: null, resizeMode: 'cover',}} />
@@ -16,7 +17,7 @@ class Category extends React.Component {
                 <View style={{flex:1, paddingLeft: 10, paddingTop: 10}}>
                 <Text style={ styles.title }> {this.props.title} </Text>
             </View>
-      </View>
+      </TouchableOpacity>
 );
   }
 }
